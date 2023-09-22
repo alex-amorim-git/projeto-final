@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colchões Stroma - Acessórios</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    
+    /* Esquema de cores */
+    :root {
+      --cor-primaria: #005f83;
+      --cor-secundaria: #c8c9c7;
+      --cor-terciaria: #babbb1;
+    }
+
+    /* Estilo geral */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--cor-primaria);
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .store-name {
+      position: absolute;
+      width: 830px;
+      height: 200px;
+      margin: 0;
+      padding: 10px;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .search-bar {
+      color: #005f83;
+      position: relative;
+      margin-top: 180px;
+      margin-bottom: 60px;;
+      text-align: center;
+      transform: translateX(85%);
+    }
+
+
+    .search-bar input[type="text"] {
+      padding: 8px 16px;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    #logo img {
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    nav ul li a.carrinho {
+      position: absolute;
+      top: 10px;
+      right: 120px;
+      margin-right: 10px;
+    }
+
+    nav ul li a.cadastro {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float i {
+      transform: translateY(2px);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #c8c9c7;
+      color: #000;    
+    }
+    footer {
+      background-color: #005f83;
+      padding: 30px 0;
+      color: #fff;
+    }
+
+    .footer-section h4 {
+      color: #fff;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons li a {
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      background-color: #005f83;
+      padding: 10px 0;
+      color: #fff;
+    }
+
+    .lista-produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .item-produto {
+      border: 1px solid #babbb1;
+      padding: 20px;
+    }
+    .imagem-produto {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .nome-produto {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .preco-produto {
+      margin-bottom: 10px;
+    }
+    .descricao-produto {
+      margin-bottom: 10px;
+    }
+    .botao-comprar {
+      background-color: #005f83;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      section {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="store-header">
+      <img class="store-name" src="imagens/nomedaloja1.jpg" alt="Nome da Loja">
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar">
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a class="carrinho" href="carrinho.html" aria-label="Carrinho de compras"><strong><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</strong></a></li>
+        <li><a class="cadastro" href="cadastro.html" aria-label="Cadastro"><strong><span class="glyphicon glyphicon-user"></span> Cadastro</strong></a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <a href="index.html" aria-label="Ir para a página inicial" id="logo">
+          <img src="imagens/logotipo 1.jpg" alt="Logo da Loja">
+        </a> 
+      </ul>
+    </nav>
+  </header>
+
+
+  <section>
+    <h2>Carrinho de Compras</h2>
+    <div class="lista-produtos">
+      <div class="item-produto">
+        <img class="imagem-produto" src="imagens/istockphoto-174398398-612x612.jpg" alt="Colchão 1">
+        <h3 class="nome-produto">Colchão de Molas</h3>
+        <p class="preco-produto">R$ 1.200,00</p>
+        <div class="quantidade">
+          <label class="label-quantidade" for="quantidade-1">Quantidade:</label>
+          <input class="input-quantidade" type="number" id="quantidade-1" value="1">
+        </div>
+        <button class="botao-remover">Remover</button>
+      </div>
+      <div class="item-produto">
+        <img class="imagem-produto" src="imagens/istockphoto-1143418000-612x612.jpg" alt="Colchão 2">
+        <h3 class="nome-produto">Colchão de Espuma</h3>
+        <p class="preco-produto">R$ 800,00</p>
+        <div class="quantidade">
+          <label class="label-quantidade" for="quantidade-2">Quantidade:</label>
+          <input class="input-quantidade" type="number" id="quantidade-2" value="2">
+        </div>
+        <button class="botao-remover">Remover</button>
+      </div>
+    </div>
+    <div class="container-frete">
+      <label for="cep">Informe o CEP:</label>
+      <input class="input-frete" type="text" id="cep">
+      <button class="calcular-frete">Calcular Frete</button>
+    </div>
+    <p class="total">Total: R$ 2.800,00</p>
+    <div class="container-checkout">
+      <a class="continuar-comprando" href="produtos.html">Continuar Comprando</a>
+      <button class="botao-finalizar">Finalizar Compra</button>
+    </div>
+    <p><a class="link-politica" href="politica-devolucao.html">Política de Devolução de Produtos</a></p>
+  </section>  
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h4>Institucional</h4>
+            <ul class="footer-links">
+              <li><a href="#">Sobre a Stroma</a></li>
+              <li><a href="#">Cupons de Desconto</a></li>
+              <li><a href="#">Questões do Meio Ambiente</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h4>Central do Cliente</h4>
+            <ul class="footer-links">
+              <li><a href="#">Conta</a></li>
+              <li><a href="#">Meus Pedidos</a></li>
+              <li><a href="#">Rastreamento de Entrega</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <ul class="footer-links">
+              <li><a href="#">Serviço de Atendimento ao Cliente</a></li>
+              <li><a href="#">Lei Geral de Proteção de Dados</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-section">
+            <div class="text-center">
+              <a href="index.html" aria-label="Ir para a página inicial">
+                <img src="imagens/logotipo 1.jpg" alt="Logo da Loja">
+              </a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-section">
+            <p>&copy; 2023 Loja Stroma. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div>
+    <a href="https://api.whatsapp.com/send?phone=5561985423830" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+  <script>
+    //JAVASCRIPT
+  </script>
+
+</body>
+</html>

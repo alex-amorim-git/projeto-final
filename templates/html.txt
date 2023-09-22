@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu site de e-commerce de livros</title>
+</head>
+<body>
+	<header>
+		<h1>Meu site de e-commerce de livros</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Início</a></li>
+				<li><a href="#">Livros</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Livros populares</h2>
+		<ul>
+			<li>
+				<h3>Nome do livro 1</h3>
+				<p>Autor: Autor do livro 1</p>
+				<p>Preço: R$ 10,00</p>
+				<button id="botao-comprar-1">Comprar</button>
+			</li>
+			<li>
+				<h3>Nome do livro 2</h3>
+				<p>Autor: Autor do livro 2</p>
+				<p>Preço: R$ 15,00</p>
+				<button id="botao-comprar-2">Comprar</button>
+			</li>
+			<li>
+				<h3>Nome do livro 3</h3>
+				<p>Autor: Autor do livro 3</p>
+				<p>Preço: R$ 20,00</p>
+				<button id="botao-comprar-3">Comprar</button>
+			</li>
+		</ul>
+
+		<h2>Seu carrinho de compras</h2>
+		<div id="carrinho">
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Autor</th>
+					<th>Preço</th>
+				</tr>
+				<tr>
+					<td colspan="3">Seu carrinho está vazio</td>
+				</tr>
+			</table>
+			<button id="botao-finalizar">Finalizar Compra</button>
+		</div>
+	</main>
+
+	<footer>
+		<p>© 2023 Meu site de e-commerce de livros. Todos os direitos reservados.</p>
+	</footer>
+
+	<script src="carrinho.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+E-COMMERCE - Loja de Colchões, 
+Tipos: Casal, solteiro, king, queen.
+Especificações: mola ou espuma, com aquecimento, 
+Acessórios - Cabeceira, box, travesseiro da NASA, espuma, pena de ganso.
+
+Data de entrega - 05/09/2023
+
+
+
+
+
+STORY MAPPING 
+
+O usuário entra no site.
+Pode ou não logar/ autenticar no site.
+O usuário pode ou não ter cadastro.
+O usuario pode logar com google ou facebook ou e-mail.
+O usuario pode trocar a senha. (Esqueci minha senha)
+O usuário não tem cadastro. Criar cadastro. Informações pessoais 
+Usuário logado, tela inicial com informação de cupons
+Aparece sininho para usuário logado com ofertas, descontos.
+Pagina inicial exibe as ofertas e promoções principais.
+Usuário visualiza os produtos.
+Opções de compartilhar o produto via redes sociais.
+Busca/localiza produto na tela inicial.
+(Se) Produto esgotado, receber informação quando estiver em estoque.
+Adicionar no carrinho, retirar do carrinho, quantidade.
+Calculo de frete com opção de frete, cep cadastrado ou em outro localidade e quem receberá o produto.
+Botão pagar para ir para outra sessão.
+Tela de revisão de pedido, resumo, endereço.
+Tela de pagamento - dados de pagamento (cartão crédito e débito, pix, qr code/ boleto)
+Opção para salvamento de dados de cartão de crédito. Relação de cartões salvos. Guardar dados do cartão para pagamentos futuros (checkbox).
+Tela de acompanhamento de pedidos e histórico. (timeline).
+Dispara e-mail com os dados do pedido e confirmação de compra.
+Dispara e-mail em cada etapa de evolução da entrega do pedido.
+E-mail de avaliação da compra.
+FAQ - Seção de perguntas frequentes, quem somos nós, por que existimos (rodapé)
+Avaliação de clientes
+testes em mobile e tablet - design responsivo.
+testes de carga e estabilidade, tráfego
+Estabelecer um banco de dados para o site
+
+
+ofertas - carrossel
+sobre e contato no rodapé
+Colocar início como link no logo da loja
+fontes para o projeto 
+#005f83
+#c8c9c7
+#babbb1
+
+teste card
+journey mapping 
+plano do mvp
+
+
+
+
+1 - Tela inicial com categoria de produtos com foto.
+2 - Autenticação - cadastro simples ou autenticação com google/facebook
+3 - Carrinho - colocar e remover, mudar quantidade e cálculo de preço final com frete
+4 - Tela de finalização de compra, pagamento e revisão do pedido, confirmação do endereço.
+5 - Tela com editar informação, histórico de pedidos e acompanhamento de entregas, rastrear entrega.
+
+
+SPRINTS DE 3 SEMANAS
+
+SPRINT 1 - Especificação / Front End, Back End, Banco de Dados da Tela Inicial. (Início: 17/04/23)
+	- Tela de login.
+	- Banco de dados - login
+	- API do banco
+	- javascript
+	
+
+SPRINT 2 - Front End, Back End, Banco de Dados da Autenticação.	(Início: 08/05/23)
+	- Tela inicial (colchão, bases, cabeceiras e travesseiros)
+	- javascript
+	
+SPRINT 3 - Front End, Back End, Banco de Dados do Carrinho.	(Início: 29/05/23)
+
+SPRINT 4 - Front End, Back End, Banco de Dados da Tela de finalização.	(Início: 19/06/23)
+
+SPRINT 5 - Front End, Back End, Banco de Dados de Acompanhamento de pedido.	(Início: 17/07/23)
+	- Manual do usuário
+
+Documentação 
+Especificação, em conjunto com o projeto, desenvolvimento.
+
+Tempo para entrega: 23 semanas.
+
+
+
+
+
+
+Paulo - full stack front end(html, css), banco de dados
+Dani - full stack documentação, javascript.
+Alex - full stack python/php
+

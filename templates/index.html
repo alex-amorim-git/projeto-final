@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colchões Stroma - Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <div class="store-header">
+        <img class="store-name" src="imagens/nomedaloja1.jpg" alt="Nome da Loja">
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisar">
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="carrinho" href="carrinho.html" aria-label="Carrinho de compras"><strong><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</strong></a></li>
+          <li><a class="cadastro" href="cadastro.html" aria-label="Cadastro"><strong><span class="glyphicon glyphicon-user"></span> Cadastro</strong></a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <a href="index.html" aria-label="Ir para a página inicial" id="logo">
+            <img src="{{ url_for('static', filename='imagens/logotipo1.jpg') }}" alt="Logo da Loja">
+          </a> 
+          <li><a href="ofertas.html" aria-label="Veja nossas ofertas"><strong><span class="glyphicon glyphicon-star"></span> Ofertas</strong></a></li>
+          <li><a href="#" aria-label="Ver todos os produtos"><strong><span class="glyphicon glyphicon-th"></span> Produtos</strong></a></li>
+          <li><a href="acessorios.html" aria-label="Veja nossos acessórios"><span class="glyphicon glyphicon-cog"></span> <strong>Acessórios</strong></a></li>
+          <li><a href="sobre.html" aria-label="Saber mais sobre a loja"><strong><span class="glyphicon glyphicon-info-sign"></span> Sobre</strong></a></li>
+          <li><a href="contato.html" aria-label="Entre em contato conosco"><strong><span class="glyphicon glyphicon-envelope"></span> Contato</strong></a></li>  
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="promo">
+        <div class="container">
+          <h2>Ofertas</h2>
+          <div id="carousel-ofertas" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-ofertas" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-ofertas" data-slide-to="1"></li>
+              <li data-target="#carousel-ofertas" data-slide-to="2"></li>
+            </ol>
+  
+            <!-- Slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="{{ url_for('static', filename='imagens/istockphoto-1143418000-612x612.jpg') }}" alt="Colchão 1">
+              </div>
+  
+              <div class="item">
+                <img src="{{ url_for('static', filename='imagens/istockphoto-174398398-612x612.jpg') }}" alt="Colchão 2">
+              </div>
+  
+              <div class="item">
+                <img src="{{ url_for('static', filename='imagens/istockphoto-528615778-1024x1024.jpg') }}" alt="Colchão 3">
+              </div>
+            </div>
+  
+             <!-- Left and right controls -->
+             <a class="left carousel-control" href="#carousel-ofertas" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-ofertas" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="promo">
+        <div class="container">
+          <h2>Colchões em promoção</h2>
+          <ul class="produtos">
+            <li class="produto">
+              <h3>Colchão de Molas</h3>
+              <img src="{{ url_for('static', filename='imagens/istockphoto-174398398-612x612.jpg') }}" alt="Imagem do Colchão de Molas" aria-label="Foto do colchão de molas">
+              <p class="preco">R$ 999,99</p>
+              <div class="compartilhar">
+                <a href="#" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Compartilhar no Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+              <button>Comprar</button>
+            </li>
+          <li class="produto">
+            <h3>Colchão de Espuma</h3>
+            <img src="{{ url_for('static', filename='imagens/istockphoto-528615778-1024x1024.jpg') }}" alt="Imagem do Colchão de Espuma" aria-label="Imagem do colchão de espuma">
+            <p>R$ 799,99</p>
+            <div class="compartilhar">
+              <a href="#" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Compartilhar no Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button>Comprar</button>
+          </li>
+          <li class="produto">
+            <h3>Colchão Ortopédico</h3>
+            <img src="{{ url_for('static', filename='imagens/istockphoto-1143418000-612x612.jpg') }}" alt="Imagem do Colchão Ortopédico" aria-label="Imagem do colchão ortopédico">
+            <p>R$ 1.499,99</p>
+            <div class="compartilhar">
+              <a href="#" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Compartilhar no Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button>Comprar</button>
+          </li>
+          <li class="produto">
+            <h3>Colchão com Aquecimento</h3>
+            <img src="{{ url_for('static', filename='imagens/istockphoto-1421085248-1024x1024.jpg') }}" alt="Imagem do Colchão com aquecimento" aria-label="Imagem do colchão com aquecimento">
+            <p>R$ 1.799,99</p>
+            <div class="compartilhar">
+              <a href="#" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Compartilhar no Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button>Comprar</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="por-que-escolher">
+        <div class="container">
+          <h2>Por que escolher nossa loja?</h2>
+          <ul>
+            <li>Ampla variedade de colchões</li>
+            <li>Atendimento personalizado</li>
+            <li>Preços competitivos</li>
+            <li>Entrega rápida</li>
+          </ul>
+        </div>
+      </section>
+ 
+    </main>
+    
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer-section">
+                <h4>Institucional</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Sobre a Stroma</a></li>
+                  <li><a href="#">Cupons de Desconto</a></li>
+                  <li><a href="#">Questões do Meio Ambiente</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-section">
+                <h4>Central do Cliente</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Conta</a></li>
+                  <li><a href="#">Meus Pedidos</a></li>
+                  <li><a href="#">Rastreamento de Entrega</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-section">
+                <h4>Contato</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Serviço de Atendimento ao Cliente</a></li>
+                  <li><a href="#">Lei Geral de Proteção de Dados</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul class="social-icons">
+                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-section">
+                <div class="text-center">
+                  <a href="index.html" aria-label="Ir para a página inicial">
+                    <img src="imagens/logotipo 1.jpg" alt="Logo da Loja">
+                  </a> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-section">
+                <p>&copy; 2023 Loja Stroma. Todos os direitos reservados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <div>
+        <a href="https://api.whatsapp.com/send?phone=5561985423830" target="_blank" class="whatsapp-float">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+      <script>
+        //JAVASCRIPT
+      </script>
+    
+  </body>
+</html>

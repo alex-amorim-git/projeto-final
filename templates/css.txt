@@ -1,0 +1,74 @@
+/* Estilos gerais */
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav li:last-child {
+	margin-right: 0;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #555;
+}
+
+/* Estilos específicos do carrinho de compras */
+#carrinho table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#carrinho th,
+#carrinho td {
+	padding: 10px;
+	text-align: left;
+}
+
+#botao-finalizar {
+	margin-top: 20px;
+	float: right;
+}
+
+#carrinho td[colspan="3"] {
+	text-align: center;
+}

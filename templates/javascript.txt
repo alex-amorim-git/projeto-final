@@ -1,0 +1,46 @@
+let carrinho = {
+  itens: []
+};
+
+function adicionarAoCarrinho(nome, autor, preco) {
+  let item = {
+    nome: nome,
+    autor: autor,
+    preco: preco
+  };
+  carrinho.itens.push(item);
+}
+
+function exibirCarrinho() {
+  let tabela = "<table>";
+  tabela += "<tr><th>Nome</th><th>Autor</th><th>Preço</th></tr>";
+  for (let i = 0; i < carrinho.itens.length; i++) {
+    let item = carrinho.itens[i];
+    tabela += "<tr><td>" + item.nome + "</td><td>" + item.autor + "</td><td>" + item.preco + "</td></tr>";
+  }
+  tabela += "</table>";
+  document.getElementById("carrinho").innerHTML = tabela;
+}
+
+
+function finalizarCompra() {
+  let total = 0;
+  for (let i = 0; i < carrinho.itens.length; i++) {
+    total += carrinho.itens[i].preco;
+  }
+  alert("Total da compra: R$ " + total.toFixed(2));
+  carrinho.itens = [];
+  exibirCarrinho();
+}
+
+
+document.getElementById("botao-comprar").addEventListener("click", function() {
+  adicionarAoCarrinho(nome, autor, preco);
+  exibirCarrinho();
+});
+
+document.getElementById("botao-finalizar").addEventListener("click", function() {
+  finalizarCompra();
+});
+
+
