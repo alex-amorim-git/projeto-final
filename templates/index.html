@@ -17,27 +17,27 @@
   <body>
     <header>
       <div class="store-header">
-        <img class="store-name" src="imagens/nomedaloja1.jpg" alt="Nome da Loja">
+        <img class="store-name" src="{{ url_for('static', filename='imagens/nomedaloja1.jpg') }}imagens/nomedaloja1.jpg" alt="Nome da Loja">
         <div class="search-bar">
           <input type="text" placeholder="Pesquisar">
         </div>
       </div>
       <nav>
         <ul>
-          <li><a class="carrinho" href="carrinho.html" aria-label="Carrinho de compras"><strong><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</strong></a></li>
-          <li><a class="cadastro" href="cadastro.html" aria-label="Cadastro"><strong><span class="glyphicon glyphicon-user"></span> Cadastro</strong></a></li>
+          <li><a class="carrinho" href="{{url_for('carrinho')}}" aria-label="Carrinho de compras"><strong><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</strong></a></li>
+          <li><a class="cadastro" href="{{url_for('cadastro')}}" aria-label="Cadastro"><strong><span class="glyphicon glyphicon-user"></span> Cadastro</strong></a></li>
         </ul>
       </nav>
       <nav>
         <ul>
-          <a href="index.html" aria-label="Ir para a página inicial" id="logo">
+          <a href="{{url_for('principal')}}" aria-label="Ir para a página inicial" id="logo">
             <img src="{{ url_for('static', filename='imagens/logotipo1.jpg') }}" alt="Logo da Loja">
           </a> 
-          <li><a href="ofertas.html" aria-label="Veja nossas ofertas"><strong><span class="glyphicon glyphicon-star"></span> Ofertas</strong></a></li>
-          <li><a href="#" aria-label="Ver todos os produtos"><strong><span class="glyphicon glyphicon-th"></span> Produtos</strong></a></li>
-          <li><a href="acessorios.html" aria-label="Veja nossos acessórios"><span class="glyphicon glyphicon-cog"></span> <strong>Acessórios</strong></a></li>
-          <li><a href="sobre.html" aria-label="Saber mais sobre a loja"><strong><span class="glyphicon glyphicon-info-sign"></span> Sobre</strong></a></li>
-          <li><a href="contato.html" aria-label="Entre em contato conosco"><strong><span class="glyphicon glyphicon-envelope"></span> Contato</strong></a></li>  
+          <li><a href="{{url_for('ofertas')}}" aria-label="Veja nossas ofertas"><strong><span class="glyphicon glyphicon-star"></span> Ofertas</strong></a></li>
+          <li><a href="{{url_for('principal')}}" aria-label="Ver todos os produtos"><strong><span class="glyphicon glyphicon-th"></span> Produtos</strong></a></li>
+          <li><a href="{{url_for('acessorios')}}" aria-label="Veja nossos acessórios"><span class="glyphicon glyphicon-cog"></span> <strong>Acessórios</strong></a></li>
+          <li><a href="{{url_for('sobre')}}" aria-label="Saber mais sobre a loja"><strong><span class="glyphicon glyphicon-info-sign"></span> Sobre</strong></a></li>
+          <li><a href="{{url_for('contato')}}" aria-label="Entre em contato conosco"><strong><span class="glyphicon glyphicon-envelope"></span> Contato</strong></a></li>  
         </ul>
       </nav>
     </header>
