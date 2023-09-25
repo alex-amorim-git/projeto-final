@@ -1,8 +1,11 @@
 from flask import Flask, render_template
 from routes.DeliveryRoutes import delivery_routes
+from routes.ProdutoRoutes import produto_routes
 
 app = Flask(__name__, static_folder='templates')
 app.register_blueprint(delivery_routes, url_prefix = '/entregas')
+app.register_blueprint(produto_routes, url_prefix = '/produtos')
+
 
 @app.route('/')
 def index():
@@ -35,6 +38,16 @@ def sobre():
 @app.route('/contato')
 def contato():
   return render_template('contato.html')
+
+@app.route('/login')
+def login():
+  return render_template('login.html')
+
+@app.route("/logon/", methods=['POST'])
+def logon():
+    #ogon code
+    logon_message = "Moving Forward..."
+    return render_template('index.html', logon_message=logon_message)
 
 if __name__ == '__main__':
     app.run()
