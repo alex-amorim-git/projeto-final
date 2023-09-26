@@ -86,10 +86,10 @@
   </style>
 </head>
 <body>
-  <header>
-    <img class="logo" src="logo_inicial.jpg" alt="Logo Colchões Stroma">
-    <h1>Colchões Stroma</h1>
-  </header>
+
+  {% extends "layout.html" %}
+
+  {% block content %}
 
   <section>
     <h2>Esqueci Minha Senha</h2>
@@ -106,71 +106,7 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Institucional</h4>
-            <ul class="footer-links">
-              <li><a href="#">Sobre a Stroma</a></li>
-              <li><a href="#">Cupons de Desconto</a></li>
-              <li><a href="#">Questões do Meio Ambiente</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Central do Cliente</h4>
-            <ul class="footer-links">
-              <li><a href="#">Conta</a></li>
-              <li><a href="#">Meus Pedidos</a></li>
-              <li><a href="#">Rastreamento de Entrega</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Contato</h4>
-            <ul class="footer-links">
-              <li><a href="#">Serviço de Atendimento ao Cliente</a></li>
-              <li><a href="#">Lei Geral de Proteção de Dados</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Redes Sociais</h4>
-            <ul class="social-icons">
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-section">
-            <div class="text-center">
-              <a href="index.html" aria-label="Ir para a página inicial">
-                <img src="logotipo 1.jpg" alt="Logo da Loja">
-              </a> 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-section">
-            <p>&copy; 2023 Loja Stroma. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% endblock %}
 
 </body>
 </html>

@@ -249,42 +249,26 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="store-header">
-      <img class="store-name" src="imagens/nomedaloja1.jpg" alt="Nome da Loja">
-      <div class="search-bar">
-        <input type="text" placeholder="Pesquisar">
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a class="carrinho" href="carrinho.html" aria-label="Carrinho de compras"><strong><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</strong></a></li>
-        <li><a class="cadastro" href="cadastro.html" aria-label="Cadastro"><strong><span class="glyphicon glyphicon-user"></span> Cadastro</strong></a></li>
-      </ul>
-    </nav>
-    <nav>
-      <ul>
-        <a href="index.html" aria-label="Ir para a página inicial" id="logo">
-          <img src="imagens/logotipo 1.jpg" alt="Logo da Loja">
-        </a> 
-      </ul>
-    </nav>
-  </header>
+
+  {% extends "layout.html" %}
+
+  {% block content %}
 
   <section>
     <h2>Login</h2>
     <form action="/logon/" method="post">
        
       <label for="email">E-mail:</label>
-      <input type="text" id="email" name="email" required>
+      <input type="text" id="email" name="email" value={{request.form.username }} required>
       
       <label for="phone">Senha:</label>
-      <input type="text" id="senha" name="senha" required>
+      <input type="password" id="senha" name="senha" value={{request.form.password }} required>
      
       <input type="submit" value="Login">
     </form>
 
     <p class="forgot-password"><a href="esqueci.html">Esqueci minha senha</a></p>
+    <p class="cadastro"><a href="{{url_for('cadastro')}}" aria-label="Cadastro"><span class="glyphicon glyphicon-user"></span> Ainda não tenho cadastro</a></p>
 
     <div class="login-options">
       <button class="facebook">Entrar com o Facebook</button>
@@ -292,71 +276,7 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Institucional</h4>
-            <ul class="footer-links">
-              <li><a href="#">Sobre a Stroma</a></li>
-              <li><a href="#">Cupons de Desconto</a></li>
-              <li><a href="#">Questões do Meio Ambiente</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Central do Cliente</h4>
-            <ul class="footer-links">
-              <li><a href="#">Conta</a></li>
-              <li><a href="#">Meus Pedidos</a></li>
-              <li><a href="#">Rastreamento de Entrega</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Contato</h4>
-            <ul class="footer-links">
-              <li><a href="#">Serviço de Atendimento ao Cliente</a></li>
-              <li><a href="#">Lei Geral de Proteção de Dados</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h4>Redes Sociais</h4>
-            <ul class="social-icons">
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-section">
-            <div class="text-center">
-              <a href="index.html" aria-label="Ir para a página inicial">
-                <img src="imagens/logotipo 1.jpg" alt="Logo da Loja">
-              </a> 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-section">
-            <p>&copy; 2023 Loja Stroma. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% endblock %}
 
   <div>
     <a href="https://api.whatsapp.com/send?phone=5561985423830" target="_blank" class="whatsapp-float">
