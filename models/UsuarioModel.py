@@ -2,7 +2,7 @@ import psycopg2
 
 # Update connection string information
 
-host = "db-project-aws-tera.czc7o1hghaix.us-east-2.rds.amazonaws.com"
+host = "db2-project-aws-tera.czc7o1hghaix.us-east-2.rds.amazonaws.com"
 dbname = "postgres"
 user = "postgres"
 password = "project0000"

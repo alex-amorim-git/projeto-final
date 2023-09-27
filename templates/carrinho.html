@@ -246,7 +246,7 @@
     <h2>Carrinho de Compras</h2>
     <div class="lista-produtos">
       <div class="item-produto">
-        <img class="imagem-produto" src="imagens/istockphoto-174398398-612x612.jpg" alt="Colchão 1">
+        <img class="imagem-produto" src="{{ url_for('static', filename='imagens/istockphoto-174398398-612x612.jpg') }}" alt="Colchão 1">
         <h3 class="nome-produto">Colchão de Molas</h3>
         <p class="preco-produto">R$ 1.200,00</p>
         <div class="quantidade">
@@ -256,7 +256,7 @@
         <button class="botao-remover">Remover</button>
       </div>
       <div class="item-produto">
-        <img class="imagem-produto" src="imagens/istockphoto-1143418000-612x612.jpg" alt="Colchão 2">
+        <img class="imagem-produto" src="{{ url_for('static', filename='imagens/istockphoto-1143418000-612x612.jpg') }}" alt="Colchão 2">
         <h3 class="nome-produto">Colchão de Espuma</h3>
         <p class="preco-produto">R$ 800,00</p>
         <div class="quantidade">

@@ -2,11 +2,13 @@ from flask import Flask, render_template
 from routes.DeliveryRoutes import delivery_routes
 from routes.ProdutoRoutes import produto_routes
 from routes.OfertaRoutes import oferta_routes
+from routes.PedidoRoutes import pedido_routes
 
 app = Flask(__name__, static_folder='templates')
 app.register_blueprint(delivery_routes, url_prefix = '/entregas')
 app.register_blueprint(produto_routes, url_prefix = '/lista_produtos')
 app.register_blueprint(oferta_routes, url_prefix = '/lista_ofertas')
+app.register_blueprint(pedido_routes, url_prefix = '/pedidos')
 
 
 @app.route('/')

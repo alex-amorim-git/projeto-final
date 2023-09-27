@@ -1,0 +1,139 @@
+CREATE TABLE TBL_PJT_PEDIDO
+
+(
+
+    "int_Pedido" serial NOT NULL,
+
+    "int_Usuario" integer NOT NULL,
+
+    "int_Item" integer NOT NULL,
+
+    "dec_Frete" float NOT NULL,
+
+    "dec_Imposto" float NOT NULL,
+
+    "bit_Vendido" BOOLEAN NOT NULL,
+
+    "dte_Registro" date NOT NULL,
+
+    PRIMARY KEY ("int_Pedido")
+
+)
+
+CREATE TABLE public.tbl_pjt_pedido_item
+(
+    "int_Produto_Item" integer NOT NULL,
+    "int_Pedido" integer NOT NULL,
+    "dec_Valor" double precision NOT NULL,
+    "dec_Desconto" double precision NOT NULL,
+    "dte_Registro" date NOT NULL
+)
+
+
+CREATE TABLE TBL_PJT_PRODUTO_ITEM
+
+(
+
+    "int_Item" serial NOT NULL,
+
+    "int_Produto" integer NOT NULL,
+
+    "str_Lote" character varying(25)[] NOT NULL,
+
+    "bit_Carrinho" bit NOT NULL,
+
+    "bit_Vendido" bit NOT NULL,
+
+    "bit_Habilitado" bit NOT NULL,
+
+    "dte_Atualiza" date NOT NULL,
+
+    "dte_Registro" date NOT NULL,
+
+    "str_Matricula" character varying(7)[] NOT NULL,
+
+    PRIMARY KEY ("int_Estoque")
+
+)
+
+CREATE OR REPLACE PROCEDURE public.prc_pjt_selecionar_oferta(
+	OUT str_Produto name,
+    OUT str_Produto_Descricao text,
+    OUT str_Marca name,
+    OUT str_Imagem name,
+    OUT dec_Valor float,
+    OUT dec_Desconto float)
+LANGUAGE sql
+AS $BODY$
+
+select  "str_Produto"
+,"str_Produto_Descricao"
+,"str_Marca"
+,"str_Imagem"
+,"dec_Valor"
+,"dec_Desconto"
+from public.tbl_pjt_produto AS p
+INNER JOIN(
+    select distinct "int_Produto" as "int_Produto"
+    from public.tbl_pjt_produto_item AS pi
+    where pi."bit_Carrinho" = false AND pi."bit_Vendido" = false
+) as pi 
+on p."int_Produto" = pi."int_Produto"   
+where "dec_Desconto" > 0
+
+$BODY$;
+
+
+CREATE TABLE IF NOT EXISTS public.tbl_pjt_status
+(
+    "int_Status" integer NOT NULL,
+    "str_Status" NAME NOT NULL,
+    "bit_Habilitado" BOOLEAN NOT NULL
+)
+
+ call public.prc_pjt_selecionar_usuario('paulo12345@gmail.com','12345', null, null)
+
+call public.prc_pjt_selecionar_oferta(null,null,null,null,null,null)
+
+CREATE TABLE TBL_PJT_CADASTRO
+
+(
+
+    "int_Usuario" INTEGER NOT NULL,
+
+    "str_Nome" name NOT NULL,
+
+    "int_Cpf" INTEGER NOT NULL,
+
+    "str_Endereco" name NOT NULL,
+
+    "str_Complemento" name,
+
+    "str_Bairro" name,
+
+    "str_Numero" int,
+
+    "str_Cidade" name NOT NULL,
+
+    "str_UF" name  NOT NULL,
+
+    "str_Pais" name,
+
+    "int_Cep" INTEGER NOT NULL,
+
+    "int_DDD1" INTEGER NOT NULL,
+
+    "int_Telefone1" INTEGER NOT NULL,
+
+    "int_DDD2" INTEGER,
+
+    "int_Telefone2" INTEGER,    
+
+    PRIMARY KEY ("int_Usuario")
+
+)
+
+INSERT INTO public.tbl_pjt_usuario ("str_Email", "str_Senha", "dte_Atualiza", "dte_Registro")
+    VALUES ("alex12345@gmail.com", "123456", "2023-09-21", "2023-09-21")
+
+rds-security-group
